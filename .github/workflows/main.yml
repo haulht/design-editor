@@ -13,8 +13,8 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: '21.x'
-          env:
-            NODE_OPTIONS: "--openssl-legacy-provider"
+        - run: echo 'NODE_OPTIONS="--openssl-legacy-provider"' >> $GITHUB_ENV
+        
         - name: Build
           run: |
             yarn install
