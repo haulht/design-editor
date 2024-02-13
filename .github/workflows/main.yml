@@ -15,10 +15,6 @@ jobs:
             node-version: '21.x'
         - run: echo 'NODE_OPTIONS="--openssl-legacy-provider"' >> $GITHUB_ENV
 
-        - run: node --version
-          env:
-            NODE_OPTIONS: "--openssl-legacy-provider"
-
         - name: Build
           run: |
             yarn install
