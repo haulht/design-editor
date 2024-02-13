@@ -112,7 +112,7 @@ class FrameHandler extends BaseHandler {
 
   getOptions = (): FrameOptions => {
     const frame = this.get()
-    return frame.toJSON(this.root.propertiesToInclude)
+    return frame.toObject(this.root.propertiesToInclude)
   }
 
   scaleDimension = options => {

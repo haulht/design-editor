@@ -19,7 +19,7 @@ export class FrameObject extends fabric.Rect {
     return super.toObject(propertiesToInclude)
   }
   toJSON(propertiesToInclude: string[] = []) {
-    return super.toObject(propertiesToInclude)
+    return super.toJSON(propertiesToInclude)
   }
   static fromObject(options: FrameOptions) {
     return new fabric.Frame(options)
