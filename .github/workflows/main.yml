@@ -13,7 +13,6 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: '21.x'
-        - run: echo 'NODE_OPTIONS="--openssl-legacy-provider"' >> $GITHUB_ENV
 
         - name: Build
           run: |
