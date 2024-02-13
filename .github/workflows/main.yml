@@ -5,7 +5,7 @@ on:
 
 jobs:
     build:
-      name: Test
+      name: Build
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
@@ -13,6 +13,19 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: '12.x'
-  
-        - run: yarn install
-        - run: yarn build
+        - name: Build
+          run: |
+            yarn install
+            yarn build
+          env:
+            REACT_APP_PIXABAY_KEY: ""
+            REACT_APP_ICONSCOUT_SECRET: ""
+            REACT_APP_ICONSCOUT_CLIENT_ID: ""
+        - name: Deploy
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./public
+          # with:
+            # personal_token: ${{ secrets.demo }}
+            #publish_dir: ./dist
