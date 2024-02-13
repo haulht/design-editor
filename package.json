@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco --openssl-legacy-provider build",
     "test": "craco test",
     "eject": "craco eject",
     "format": "prettier --write src"

@@ -9,12 +9,16 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: Use Node.js 21.x
+        - name: Setup Node.js 21.x
           uses: actions/setup-node@v3
           with:
             node-version: '21.x'
         - run: echo 'NODE_OPTIONS="--openssl-legacy-provider"' >> $GITHUB_ENV
-        
+
+        - run: node --version
+          env:
+            NODE_OPTIONS: "--openssl-legacy-provider"
+
         - name: Build
           run: |
             yarn install
