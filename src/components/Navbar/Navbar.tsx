@@ -1,8 +1,8 @@
 import { Flex, IconButton, Input } from 'theme-ui'
 import { useState } from 'react'
 import { DownloadIcon, LogoIcon, GithubIcon } from './NavbarIcons'
-import context from "../../uibox/editor";
-import { useEditorContext, useHandlers } from '@/uibox'
+//import context from "../../uibox/editor";
+import { useEditorContext } from '@/uibox'
 
 function Navbar() {
   const { canvas } = useEditorContext()
