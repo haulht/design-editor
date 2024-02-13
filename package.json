@@ -30,6 +30,7 @@
     "eject": "craco eject",
     "format": "prettier --write src"
   },
+  "homepage": "https://haulht.github.io/design-editor",
   "eslintConfig": {
     "extends": [
       "react-app",
