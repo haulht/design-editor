@@ -9,23 +9,23 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: Use Node.js 12.x
+        - name: Use Node.js 21.x
           uses: actions/setup-node@v3
           with:
-            node-version: '12.x'
+            node-version: '21.x'
         - name: Build
           run: |
             yarn install
             yarn build
           env:
-            REACT_APP_PIXABAY_KEY: ""
-            REACT_APP_ICONSCOUT_SECRET: ""
-            REACT_APP_ICONSCOUT_CLIENT_ID: ""
+            REACT_APP_PIXABAY_KEY: "42347169-95bfa8d1e6c633d752340dcff"
+            REACT_APP_ICONSCOUT_SECRET: "Dz86ncVyC2O45ClP1xAyEmW7qKg5W1VJ"
+            REACT_APP_ICONSCOUT_CLIENT_ID: "106398455220771"
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v3
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./public
+            publish_dir: ./build
           # with:
             # personal_token: ${{ secrets.demo }}
             #publish_dir: ./dist
