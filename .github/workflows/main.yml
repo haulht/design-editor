@@ -21,6 +21,7 @@ jobs:
             REACT_APP_PIXABAY_KEY: "42347169-95bfa8d1e6c633d752340dcff"
             REACT_APP_ICONSCOUT_SECRET: "Dz86ncVyC2O45ClP1xAyEmW7qKg5W1VJ"
             REACT_APP_ICONSCOUT_CLIENT_ID: "106398455220771"
+            NODE_OPTIONS: "--openssl-legacy-provider"
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v3
           with:
